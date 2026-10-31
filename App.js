@@ -1,20 +1,34 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+import React, { useEffect, useState } from "react";
+import { View, StyleSheet, useWindowDimensions } from "react-native";
+import Bird from "./src/components/Bird";
+const GRAVITY = 3;
+const FRAME_DELAY = 30;
+const BIRD_HEIGHT = 60;
 export default function App() {
+  const { width, height } = useWindowDimensions();
+  const birdLeft = width / 2;
+  const [birdBottom, setBirdBottom] = useState(height / 2);
+  useEffect(() => {
+  setBirdBottom(height / 2);
+  }, [height]);
+  useEffect(() => {
+    if (birdBottom <= BIRD_HEIGHT / 2) return;
+    const timerId = setTimeout(() => {
+    setBirdBottom((previousBottom) =>
+    Math.max(BIRD_HEIGHT / 2, previousBottom - GRAVITY)
+    );
+    }, FRAME_DELAY);
+    return () => clearTimeout(timerId);
+  }, [birdBottom]);
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Bird birdLeft={birdLeft} birdBottom={birdBottom} />
     </View>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  flex: 1,
+  backgroundColor: "#ffffff",
   },
 });

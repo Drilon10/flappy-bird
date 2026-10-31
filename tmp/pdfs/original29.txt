@@ -1,0 +1,49 @@
+ 
+- - - - - - -
+Lesson 29 (Estimated time: 75 minutes)
+Lesson 29
+Finishing Game
+Contents:
+●  Replace Bird View Element with Image Element
+Notes for instructor:
+Before starting to teach this lesson, youʼll have to do a 5-minute reviewpreviouslesson to
+make sure they remember something from previous lessons. After you finish the review you
+should explain on the board the contents just to get them ready. All the coursework
+completed in class should be uploaded to GitHub.
+Replacing Bird View Element
+Todayʼs lesson is about finishing the game. We start by replacing Bird View Element with an
+Image Element, so first, we update the Bird.js file by importing the Image Element and
+Replacing the View element with it. We extend all of the style properties and add source &
+resizeMode attributes as well.
+Dashboard Courses School Files Books React Native React Native Version 1.3 - Templ… Module 29
+Calendar My courses
+9 DM
+10/23/26, 10:44 PM Lesson 29 (Estimated time: 75 minutes): Lesson 29 | DS
+https://learn.digitalschool.tech/mod/book/view.php?id=8132 1/6
+After this, we continue to update the background of the App. We import the Image element
+and add a class which will be backgroundImage
+10/23/26, 10:44 PM Lesson 29 (Estimated time: 75 minutes): Lesson 29 | DS
+https://learn.digitalschool.tech/mod/book/view.php?id=8132 2/6
+After this, we continue to edit Obstacles, and we replace the current View elements with
+Image elements, same as what weʼve done with the other Components.
+10/23/26, 10:44 PM Lesson 29 (Estimated time: 75 minutes): Lesson 29 | DS
+https://learn.digitalschool.tech/mod/book/view.php?id=8132 3/6
+Results:
+10/23/26, 10:44 PM Lesson 29 (Estimated time: 75 minutes): Lesson 29 | DS
+https://learn.digitalschool.tech/mod/book/view.php?id=8132 4/6
+Source Code: Flappy Bird
+Award theImprovement in React Nativebadge to the student who showed
+the most progress in class: Award
+Evaluation Criteria:
+✔  All students should finish Flappy Bird Game
+✔  Badges should be awarded
+10/23/26, 10:44 PM Lesson 29 (Estimated time: 75 minutes): Lesson 29 | DS
+https://learn.digitalschool.tech/mod/book/view.php?id=8132 5/6
+Digital School Learning Management System info@digitalschool.tech
+Copyright © Digital School. All rights reserved.
+Tools needed:
+✔  Computers
+✔  VS Code
+Jump to...
+10/23/26, 10:44 PM Lesson 29 (Estimated time: 75 minutes): Lesson 29 | DS
+https://learn.digitalschool.tech/mod/book/view.php?id=8132 6/6
