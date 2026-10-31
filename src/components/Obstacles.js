@@ -1,39 +1,43 @@
-import { View, StyleSheet } from 'react-native';
+import React from 'react';
+import { Image } from 'react-native';
 
 const Obstacles = ({
     color,
-    obstacleWidth,
-    obstacleHeight,
-    randomBottom,
-    gap,
-    obstaclesLeft
-}) => {
-    return(
-        <View>
-            <View style={styles.obstacle}></View>
-            <View style={styles.obstacle2}></View>
-        </View>
+    obstacleWidth, 
+    obstacleHeight, 
+    randomBottom, 
+    gap, 
+    obstaclesLeft}) => {
+
+    return (
+        <>
+            <Image style={{
+                position: 'absolute',
+                zIndex: 0,
+                width: obstacleWidth,
+                height: 500,
+                left: obstaclesLeft,
+                bottom: randomBottom + obstacleHeight + gap,
+
+                }}
+                source={require('../../assets/pipe.png')}
+                resizeMode="cover"
+            />
+            <Image style={{
+                position: 'absolute',
+                zIndex: 0,
+                backgroundColor: color,
+                width: obstacleWidth,
+                height: obstacleHeight,
+                left: obstaclesLeft,
+                bottom: randomBottom,
+
+                }}
+                source={require('../../assets/pipe.png')}
+                resizeMode="cover"
+            />
+        </>
     )
 }
 
-const styles = StyleSheet.create({
-  obstacle: {
-    position: 'absolute',
-    backgroundColor: color,
-    width: obstacleWidth,
-    height: 500,
-    left: obstaclesLeft,
-    bottom: randomBottom + obstacleHeight + gap
-  },
-
-  obstacle2: {
-    position: 'absolute',
-    backgroundColor: color,
-    width: obstacleWidth,
-    height: obstacleHeight,
-    left: obstaclesLeft,
-    bottom: randomBottom
-  }
-});
-
-export default Obstacles;
+export default Obstacles
